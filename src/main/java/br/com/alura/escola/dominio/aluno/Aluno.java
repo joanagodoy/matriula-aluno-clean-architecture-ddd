@@ -3,6 +3,7 @@ package br.com.alura.escola.dominio.aluno;
 import java.util.ArrayList;
 import java.util.List;
 
+//aggregate root
 public class Aluno {
 	
 	private CPF cpf;
@@ -26,9 +27,9 @@ public class Aluno {
 		}
 		this.telefones.add(new Telefone(ddd, numero));
 	}
-	
-	public String getCpf() {
-		return cpf.getNumero();
+
+	public CPF getCpf() {
+		return cpf;
 	}
 	
 	public String getNome() {
