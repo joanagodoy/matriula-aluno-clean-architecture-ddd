@@ -1,8 +1,8 @@
-package gameficacao.infra;
+package br.com.alura.gameficacao.infra;
 
-import br.com.alura.escola.dominio.aluno.CPF;
-import gameficacao.dominio.RepositorioDeSelos;
-import gameficacao.dominio.Selo;
+import br.com.alura.shared.dominio.CPF;
+import br.com.alura.gameficacao.dominio.RepositorioDeSelos;
+import br.com.alura.gameficacao.dominio.Selo;
 
 import java.util.ArrayList;
 import java.util.List;

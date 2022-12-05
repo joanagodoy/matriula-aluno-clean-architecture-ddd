@@ -1,8 +1,10 @@
-package br.com.alura.escola;
+package br.com.alura;
 
 import br.com.alura.escola.aplicacao.aluno.matricular.MatricularAluno;
 import br.com.alura.escola.aplicacao.aluno.matricular.MatricularAlunoDto;
-import br.com.alura.escola.dominio.PublicadorDeEventos;
+import br.com.alura.gameficacao.aplicacao.GeraSeloAlunoMatriculado;
+import br.com.alura.gameficacao.infra.RepositorioDeSelosEmMemoria;
+import br.com.alura.shared.evento.PublicadorDeEventos;
 import br.com.alura.escola.dominio.aluno.LogAlunoMatriculado;
 import br.com.alura.escola.infra.aluno.RepositorioDeAlunosEmMemoria;
 
@@ -15,6 +17,7 @@ public class MatricularAlunoPorLinhaDeComando {
 
 		PublicadorDeEventos publicador = new PublicadorDeEventos();
 		publicador.adicionar(new LogAlunoMatriculado());
+		publicador.adicionar(new GeraSeloAlunoMatriculado(new RepositorioDeSelosEmMemoria()));
 
 		MatricularAluno matricular = new MatricularAluno(
 			new RepositorioDeAlunosEmMemoria(),
@@ -25,5 +28,4 @@ public class MatricularAlunoPorLinhaDeComando {
 						cpf, 
 						email));
 	}
-
 }

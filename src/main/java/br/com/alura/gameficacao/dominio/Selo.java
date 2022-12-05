@@ -1,6 +1,6 @@
-package gameficacao.dominio;
+package br.com.alura.gameficacao.dominio;
 
-import br.com.alura.escola.dominio.aluno.CPF;
+import br.com.alura.shared.dominio.CPF;
 
 public class Selo {
 

@@ -1,7 +1,7 @@
 package br.com.alura.escola.aplicacao.aluno.matricular;
 
 import br.com.alura.escola.dominio.aluno.Aluno;
-import br.com.alura.escola.dominio.aluno.CPF;
+import br.com.alura.shared.dominio.CPF;
 import br.com.alura.escola.dominio.aluno.Email;
 
 public class MatricularAlunoDto {
